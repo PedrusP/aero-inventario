@@ -78,7 +78,7 @@ while True:
                 try:
                     idItem = int(input())
                 except:
-                    print('Valor invalido')
+                    print('Valor invalido!')
             
             table(['ID', 'Nome'], locais)
             ids = []
@@ -90,7 +90,7 @@ while True:
                 try:
                     idLocal = int(input())
                 except:
-                    print('Valor invalido')
+                    print('Valor invalido!')
             try:
                 cursor.execute('update Itens set LocalID = %d, UltimoMov = NOW() where ID = %d' % (idLocal, idItem))
                 server.commit()
@@ -121,6 +121,6 @@ while True:
         except Error as e:
             print(e)
     if opt == '4': # Adicionar local
-        print("Nao implementado")
+        print("Nao implementado!")
     if opt == '5': # Sair
         break
